@@ -40,16 +40,16 @@ namespace Algorithm.Tests.Composition
 
         // Uncomment this test and make it pass reusing as much code as 
         // possible from other classes that are available in the Composition folder
-        //[Fact]
-        //public void HighPassSummingAggregator_Applys_Filter()
-        //{                
-        //    var aggregator = new PointsAggregator(_measurements, new HighPassFilter(), new SummingStrategy());
+        [Fact]
+        public void HighPassSummingAggregator_Applys_Filter()
+        {                
+            var aggregator = new PointsAggregator(_measurements, new HighPassFilter(), new SummingStrategy());
 
-        //    var result = aggregator.Aggregate();
+            var result = aggregator.Aggregate();
 
-        //    Assert.Equal(105, result.X);
-        //    Assert.Equal(15, result.Y);
-        //}
+            Assert.Equal(105, result.X);
+            Assert.Equal(15, result.Y);
+        }
 
         /// Uncomment this test and make it pass by building a new class to 
         /// hide the "composition" of strategies and filters ...
