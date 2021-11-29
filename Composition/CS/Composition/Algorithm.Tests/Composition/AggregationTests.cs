@@ -53,16 +53,16 @@ namespace Algorithm.Tests.Composition
 
         /// Uncomment this test and make it pass by building a new class to 
         /// hide the "composition" of strategies and filters ...
-        //[Fact]
-        //public void CustomHighPassSummingAggregator_Applys_Filter()
-        //{                
-        //    var aggregator = new HighPassSummingAggregator(_measurements);
+        [Fact]
+        public void CustomHighPassSummingAggregator_Applys_Filter()
+        {                
+            var aggregator = new HighPassSummingAggregator(_measurements);
 
-        //    var result = aggregator.Aggregate();
+            var result = aggregator.Aggregate();
 
-        //    Assert.Equal(105, result.X);
-        //    Assert.Equal(15, result.Y);
-        //}
+            Assert.Equal(105, result.X);
+            Assert.Equal(15, result.Y);
+        }
 
         Measurement[] _measurements = new[]
         {
